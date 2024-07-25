@@ -1,17 +1,27 @@
 let pyodide;
 
 async function loadPyodide() {
-    pyodide = await loadPyodide();
-    await pyodide.loadPackage("micropip");
-    await pyodide.runPythonAsync(`
-        import micropip
-        await micropip.install('regex')
-    `);
+    try {
+        pyodide = await loadPyodide();
+        await pyodide.loadPackage("micropip");
+        await pyodide.runPythonAsync(`
+            import micropip
+            await micropip.install('regex')
+        `);
+        console.log("Pyodide loaded successfully");
+    } catch (error) {
+        console.error("Error loading Pyodide:", error);
+    }
 }
 
 loadPyodide();
 
 async function convertUrls() {
+    if (!pyodide) {
+        alert("Pyodide is not loaded yet. Please wait and try again.");
+        return;
+    }
+
     const inputUrls = document.getElementById('input-urls').value.split('\n');
     const outputTextarea = document.getElementById('output-urls');
     
