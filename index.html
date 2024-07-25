@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net;">
-    <title>MITx-Canvas URL Converter v1.0</title>
+    <title>MITx-Canvas URL Converter v1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>URL Converter</h1>
+        <h1>MITx-Canvas URL Converter v1</h1>
         <textarea id="input-urls" rows="10" placeholder="Enter URLs, one per line"></textarea>
-        <button id="convert-btn">Convert</button>
-        <textarea id="output-urls" rows="10" readonly></textarea>
+        <button id="convert-btn" disabled>Convert</button>
+        <textarea id="output-urls" rows="10" readonly>Loading Pyodide... Please wait.</textarea>
     </div>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js" integrity="sha384-FZTcAVT6OVZzAFr1Gju8RQbrBavMKGEDOLwkslHO7yOmj1kCR68DnZgT1zPTmT0" crossorigin="anonymous"></script>
     <script src="script.js"></script>

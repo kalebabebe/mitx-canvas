@@ -1,6 +1,6 @@
 let pyodide;
 
-async function loadPyodide() {
+async function loadPyodideAndPackages() {
     try {
         pyodide = await loadPyodide();
         await pyodide.loadPackage("micropip");
@@ -9,12 +9,12 @@ async function loadPyodide() {
             await micropip.install('regex')
         `);
         console.log("Pyodide loaded successfully");
+        document.getElementById('convert-btn').disabled = false;
     } catch (error) {
         console.error("Error loading Pyodide:", error);
+        document.getElementById('output-urls').value = "Error loading Pyodide. Please refresh the page and try again.";
     }
 }
-
-loadPyodide();
 
 async function convertUrls() {
     if (!pyodide) {
@@ -60,4 +60,8 @@ print(result)
     }
 }
 
-document.getElementById('convert-btn').addEventListener('click', convertUrls);
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('convert-btn').addEventListener('click', convertUrls);
+    document.getElementById('convert-btn').disabled = true;
+    loadPyodideAndPackages();
+});
