@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MITx-Canvas URL Converter v1</title>
+    <title>MITx-Canvas URL Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>MITx-Canvas URL Converter v1</h1>
+        <div class="instructions">
+            <p>Enter the original URLs below, one per line. Click "Convert" to generate the new URLs.</p>
+        </div>
         <textarea id="input-urls" rows="10" placeholder="Enter URLs, one per line"></textarea>
         <button id="convert-btn">Convert</button>
         <textarea id="output-urls" rows="10" readonly></textarea>
+        <div class="footer">
+            <p>For more information, see the <a href="https://odl.zendesk.com/hc/en-us/articles/20986428700315-MITx-Canvas-LTI-Integration" target="_blank">KB article</a>.</p>
+            <p>Support: <a href="mailto:mitx-support@mit.edu">mitx-support@mit.edu</a></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
