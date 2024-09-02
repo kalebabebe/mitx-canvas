@@ -1,3 +1,5 @@
+#no longer used
+
 import re
 
 def convert_url(old_url):
