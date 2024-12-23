@@ -23,7 +23,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.instructions {
+.instructions { /* If you are using this class somewhere */
     background-color: #e9f5ff;
     border-left: 4px solid #003f5c;
     padding: 10px 15px;
@@ -31,7 +31,7 @@ h1 {
     font-size: 14px;
 }
 
-textarea {
+textarea { /* If you are using this class somewhere */
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -41,7 +41,7 @@ textarea {
     resize: vertical;
 }
 
-button {
+button { /* If you are using this class somewhere */
     display: block;
     width: 100%;
     padding: 12px;
@@ -58,32 +58,33 @@ button:hover {
     background-color: #00527a;
 }
 
-.footer {
+.footer { /* If you are using this class somewhere */
     margin-top: 20px;
     text-align: center;
     font-size: 14px;
     color: #666;
 }
 
-.footer a {
+.footer a { /* If you are using this class somewhere */
     color: #003f5c;
     text-decoration: none;
 }
 
-.footer a:hover {
+.footer a:hover { /* If you are using this class somewhere */
     text-decoration: underline;
 }
 
-/* Landing page specific styles */
 .conversion-options {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     gap: 30px;
     margin-top: 30px;
 }
 
 .option {
-    flex: 1;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
@@ -92,6 +93,7 @@ button:hover {
     transition: transform 0.3s ease;
     text-decoration: none;
     color: inherit;
+    box-sizing: border-box;
 }
 
 .option:hover {
@@ -99,14 +101,14 @@ button:hover {
 }
 
 .option img {
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
 .option:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .option h2 {
@@ -120,17 +122,11 @@ button:hover {
     font-size: 14px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .conversion-options {
-        flex-direction: column;
+@media (max-width: 600px) {
+    .option {
+        padding: 15px;
     }
-    
-    .container {
-        padding: 20px;
-    }
-    
-    .option img {
-        max-width: 100%;
+    .option h2 {
+        font-size: 16px;
     }
 }
