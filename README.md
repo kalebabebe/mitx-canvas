@@ -1,7 +1,7 @@
-# MITx URL Converter Tool
+# MITx-Canvas URL Converter Tool
 
 ## Description
-The MITx URL Converter Tool is a web-based utility designed to help instructors convert MITx URLs for proper integration with Canvas. This tool offers two conversion options to streamline the process of integrating MITx content into Canvas courses by automatically transforming URLs into the correct format.
+The MITx-Canvas URL Converter Tool is a web-based utility designed to help instructors convert MITx URLs for proper integration with Canvas using MITx as the LTI provider. This tool offers two conversion options to streamline the process of integrating MITx content into Canvas courses by automatically transforming URLs into the correct format.
 
 ## Features
 - Two specialized URL converters:
