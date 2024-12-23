@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential URL Converter - MITx</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sequential URL Converter</h1>
+        <div class="instructions">
+            <p>Enter the sequential URLs below, one per line. Click "Convert" to generate the vertical format URLs.</p>
+            <p>Example input: https://lms.mitx.mit.edu/learn/course/course-v1:MITx+16.50r+2025_Spring/block-v1:MITx+16.50r+2025_Spring+type@sequential+block@39ce44e7682c40aab66497f17094c6f3/block-v1:MITx+16.50r+2025_Spring+type@vertical+block@a33f9c9658d249139b2453efbc825b76</p>
+        </div>
+        <textarea id="input-urls" rows="10" placeholder="Enter sequential URLs, one per line"></textarea>
+        <button id="convert-btn">Convert</button>
+        <textarea id="output-urls" rows="10" readonly></textarea>
+        <div class="footer">
+            <p><a href="index.html">← Back to converter selection</a></p>
+            <p>For support: <a href="mailto:mitx-support@mit.edu">mitx-support@mit.edu</a></p>
+        </div>
+    </div>
+    <script src="sequential.js"></script>
+</body>
+</html>

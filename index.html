@@ -5,21 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MITx-Canvas URL Converter</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .conversion-options {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .option {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #003f5c;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .option:hover {
+            transform: scale(1.05);
+        }
+        .option img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .option:hover img {
+            transform: scale(1.2);
+        }
+        .option h2 {
+            color: #003f5c;
+            margin-bottom: 10px;
+        }
+        .option p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>MITx-Canvas URL Converter v1</h1>
-        <div class="instructions">
-            <p>Enter the original URLs below, one per line. Click "Convert" to generate the new URLs.</p>
-        </div>
-        <textarea id="input-urls" rows="10" placeholder="Enter URLs, one per line"></textarea>
-        <button id="convert-btn">Convert</button>
-        <textarea id="output-urls" rows="10" readonly></textarea>
-        <div class="footer">
-            <p>For more information, see this <a href="https://odl.zendesk.com/hc/en-us/articles/20986428700315-MITx-Canvas-LTI-Integration" target="_blank">article</a>.</p>
-            <p>For support: <a href="mailto:mitx-support@mit.edu">mitx-support@mit.edu</a></p>
+        <h1>MITx URL Converter Tool</h1>
+        <div class="conversion-options">
+            <a href="sequential.html" class="option">
+                <img src="images/sequential.png" alt="Sequential URL conversion">
+                <h2>Convert Sequentials/Sub-Sections</h2>
+                <p>Select this option to convert entire sequential</p>
+            </a>
+            <a href="vertical.html" class="option">
+                <img src="images/vertical.png" alt="Vertical URL conversion">
+                <h2>Convert Verticals/Units</h2>
+                <p>Select this option if you only want to convert a single vertical</p>
+            </a>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
