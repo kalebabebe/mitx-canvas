@@ -1,12 +1,12 @@
 function convertUrl(oldUrl) {
-    // First, check if it's a valid URL
+    // Extract the base URL (e.g., "https://example.com")
     const baseUrlMatch = oldUrl.match(/https?:\/\/[^/]+/);
     if (!baseUrlMatch) {
         return "Invalid URL: Base URL not found";
     }
     const baseUrl = baseUrlMatch[0];
 
-    // Extract the course ID
+    // Extract the course ID (e.g., "course-v1:edX+DemoX+Demo_Course")
     const courseIdMatch = oldUrl.match(/course-v1:[^/]+/);
     if (!courseIdMatch) {
         return "Course ID not found in URL";
